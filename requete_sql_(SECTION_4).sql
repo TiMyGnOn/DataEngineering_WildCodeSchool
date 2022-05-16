@@ -3,7 +3,7 @@ SET @ID_CLIENT_MAX_LOC = (SELECT customer_id FROM (
         ) AS T
 );
 
-SELECT c.last_name, c.first_name,  a.address, count(r.customer_id) as Max, a.postal_code, a.city,a.latitude,a.longitude
+SELECT c.last_name, c.first_name,  a.address, count(r.customer_id) as nb_locations, a.postal_code, a.city,a.latitude,a.longitude
 
 FROM customer c
 INNER JOIN address a
